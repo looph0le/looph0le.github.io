@@ -28,7 +28,7 @@ jobs:
       - name: 'build'
         uses: shalzz/zola-deploy-action@v0.13.0
         env:
-          PAGES_BRANCH: gh-pages
+          PAGES_BRANCH: main
           BUILD_DIR: .
           TOKEN: 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
           # BUILD_ONLY: true
