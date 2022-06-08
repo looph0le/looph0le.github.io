@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://looph0le.github.io/sitemap.xml
