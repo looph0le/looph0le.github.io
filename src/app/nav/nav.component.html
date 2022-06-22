@@ -1,5 +1,5 @@
 <nav
-  class="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-900 shadow-lg navbar navbar-expand-lg navbar-light"
+  class="relative w-full flex flex-wrap items-center justify-between py-3 bg-black text-gray-900 shadow-lg navbar navbar-expand-lg navbar-light"
 >
   <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
     <button
@@ -27,27 +27,45 @@
         ></path>
       </svg>
     </button>
-      <a href="" class="text-white font-bold pr-5 text-xl">Asian Business</a>
+      <a routerLink="/" role="button">
+      <img class="h-20 pr-5 lg:border-r-2 border-0" src="/assets/asian.png" alt="asian_logo">
+      </a>
     <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
       <!-- Left links -->
-      <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
-        <li class="nav-item p-2">
-          <a class="nav-link text-white" href="#">Dashboard</a>
+      <ul class="text-cyan-300 navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+        <li class="nav-item p-1">
+          <a class="nav-link" routerLink="/portfolio">PORTFOLIO</a>
         </li>
-        <li class="nav-item p-2">
+        <li class="nav-item p-1">
           <a
-            class="nav-link text-white hover:opacity-80 focus:opacity-80 p-0"
+            class="nav-link hover:opacity-80 focus:opacity-80 p-0"
             href="#"
-            >Team</a
+            >SERVICES</a
           >
         </li>
-        <li class="nav-item p-2">
+        <li class="nav-item p-1">
           <a
-            class="nav-link text-white hover:opacity-80 focus:opacity-80 p-0"
+            class="nav-link hover:opacity-80 focus:opacity-80 p-0"
             href="#"
-            >Projects</a
+            >SOLUTIONS</a
           >
         </li>
+        <li class="nav-item p-1">
+          <a
+            class="nav-link hover:opacity-80 focus:opacity-80 p-0"
+            href="#"
+            >UPDATES</a
+          >
+        </li>
+        <li class="nav-item p-1">
+          <a
+            class="nav-link hover:opacity-80 focus:opacity-80 p-0"
+            href="#"
+            >CONTACT US</a
+          >
+        </li>
+
+
       </ul>
       <!-- Left links -->
     </div>
