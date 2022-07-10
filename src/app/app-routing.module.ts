@@ -10,7 +10,7 @@ import { ContactComponent } from './contact/contact.component'
 const routes: Routes = [
   { path: '' , component: HomeComponent },
   { path: 'portfolio' , component: PortfolioComponent },
-  { path: 'services' , component: ServicesComponent },
+  { path: 'service' , component: ServicesComponent },
   { path: 'solutions' , component: SolutionsComponent },
   { path: 'contact' , component: ContactComponent },
 ];
@@ -20,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
