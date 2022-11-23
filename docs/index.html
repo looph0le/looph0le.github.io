@@ -6,33 +6,76 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/style.css" rel="stylesheet">
         <script src="https://cdn.tailwindcss.com"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
     </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
     .damnfont {
     font-family: 'Major Mono Display', monospace;
     }
 
     .mono-mono {
-    font-family: 'Cutive Mono', monospace;
+    font-family: 'Space Mono', monospace;
+
     }
 </style>
-    <body class="bg-black text-white">
-        <div class="w-[150px] h-[150px] bg-green-500/40 absolute p-[150px] z-0 blur-[100px]"></div>
-        <div class="w-[150px] h-[150px] bg-blue-500/40 absolute z-0 blur-[100px]"></div>
-        <div class="text-[100px] p-10 text-green-100 z-40 relative damnfont">
-            <h1 class="mx-auto"><a class="">Loop</a>h<a href="https://github.com/looph0le" target="_blank" rel="noopener" class="text-green-500 hover:underline hover:underline-offset-[20px]">0</a>le</h1>
+    <body class="bg-black text-white max-w-[1500px] mx-auto">
+
+    <div class=" grid lg:grid-cols-3 ">
+        <div class="text-5xl p-5 text-green-100 z-40 relative damnfont flex mx-auto">
+            <h1 class="my-auto"><a class="">Loop</a>h<a href="https://github.com/looph0le" target="_blank" rel="noopener" class="text-green-500 hover:underline hover:underline-offset-[20px]">0</a>le</h1>
         </div>
-        <div class="flex my-auto">
-            
-        </div>
-        <div class="p-10 relative z-40 text-[30px] mono-mono pt-[100px]">
-            <ul class="flex flex-row">
-                <li class="mx-3 text-green-500 uppercase">[<a class="text-green-100/50" href="https://github.com/looph0le" target="_blank" rel="noopener" >Github</a>]</li>
-                <li class="mx-3 text-green-500 uppercase">[<a class="text-green-100/50" href="https://github.com/looph0le/dotfiles" target="_blank" rel="noopener" >Dotfiles</a>]</li>
+
+
+        <div class="p-3 relative z-40 md:text-lg mono-mono p-10 lg:col-span-2 mx-auto my-auto">
+            <ul class="grid grid-cols-3 gap-[10px] text-center">
+                <li class="text-green-500 uppercase">[<a class="text-green-100/50" href="https://github.com/looph0le" target="_blank" rel="noopener" >Github</a>]</li>
+                <li class="text-green-500 uppercase">[<a class="text-green-100/50" href="https://github.com/looph0le/dotfiles" target="_blank" rel="noopener" >Dotfiles</a>]</li>
+                <li class="text-green-500 uppercase">[<a class="text-green-100/50" href="https://www.youtube.com/channel/UCczeHsI053Pw-FNIkWQG0aQ" target="_blank" rel="noopener" >Youtube</a>]</li>
             </ul>
         </div>
-        <h1 class="mono-mono p-10">Under Development ...</h1>
+
+        <div class="flex mx-auto">
+            <img class="w-[300px] h-[300px] grayscale hover:invert" src="./static/71015415.png" alt="looph0le">
+        </div>
+
+
+            <div class=" p-3 mono-mono text-sm text-green-200 mx-auto" x-data="{
+            quote: null,
+
+            getQuotes() {
+                fetch('https://programming-quotes-api.herokuapp.com/quotes/random')
+                .then((response) => response.json())
+                .then((json) => this.quote= json);
+            }
+            }" x-init="getQuotes()">
+                <p x-text="quote.en"></p>
+                <p class="text-green-400" x-text="quote.author"></p>
+            </div>
+
+        <div class="p-3 mono-mono text-xs md:text-sm ">
+            <h1 class="text-lg text-green-400">Introduction</h1>
+            <h2>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</h2>
+        </div>
+
+        <div class="p-3 mono-mono text-xs md:text-sm ">
+            <h1 class="text-lg text-green-400 py-1">Education</h1>
+            <p><a class="text-green-500">Course: </a>Diploma In Computer Engineering</p>
+            <p class="blur hover:blur-0"><a class="text-green-500">Institute: </a>The Maharaja Sayajiro University Of Baroda</p>
+            <p><a class="text-green-500">Duration: </a>3 years [20-23]</p>
+            <p><a class="text-green-500">Status: </a>Pursuing</p>
+        </div>
+
+        <div class="p-3 mono-mono text-xs md:text-sm">
+            <h2>lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi lorem pariatur mollit ex esse exercitation amet. nisi anim cupidatat excepteur officia. reprehenderit nostrud nostrud ipsum lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. nostrud officia pariatur ut officia. sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor lorem duis laboris cupidatat officia voluptate. culpa proident adipisicing id nulla nisi laboris ex in lorem sunt duis officia eiusmod. aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</h2>
+        </div>
+
+        <div class="p-3 mono-mono text-xs md:text-sm">
+            <h2>lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi lorem pariatur mollit ex esse exercitation amet. nisi anim cupidatat excepteur officia. reprehenderit nostrud nostrud ipsum lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. nostrud officia pariatur ut officia. sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor lorem duis laboris cupidatat officia voluptate. culpa proident adipisicing id nulla nisi laboris ex in lorem sunt duis officia eiusmod. aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</h2>
+        </div>
+
+    </div>
     </body>
 </html>
