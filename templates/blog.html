@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="p-5">
+<h1 class="title text-2xl">
+  {{ section.title }}
+</h1>
+<ul class="py-2">
+  <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
+  {% for page in section.pages %}
+  <li><a class="hover:font-bold" href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+  <h1 class="text-2xl">{{ page.title }}</h1>
+  {% if page.date %}
+  <small class="blog-date font-bold">{{ page.date }}</small>
+  {% endif %}
+</div>  
+<div id="blog">  
+  {{ page.content | safe }}
+</div>  
+{% endblock content %}
